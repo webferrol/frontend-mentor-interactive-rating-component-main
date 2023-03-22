@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+<body>
+
+  <!-- Rating state start -->
+
+  <article class="card rating-state">
+    <form id="rating-form">
+      <h1 class="title">How did we do?</h1>
+      <p class="content">
+        Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
+      </p>
+      <div class="btn-group" role="group">
+        <input type="button" value="1" name="star-1">
+        <input type="button" value="2" name="star-2">
+        <input type="button" value="3" name="star-3">
+        <input type="button" value="4" name="star-4">
+        <input type="button" value="5" name="star-5">
+      </div>
+      <button class="btn submit">Submit</button>
+    </form>
+  </article>
+
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+
+  <article class="card thank-you-state none">
+    You selected <!-- Add rating here --> out of 5
+    Thank you!
+    We appreciate you taking the time to give a rating. If you ever need more support,
+    don’t hesitate to get in touch!
+  </article>
+
+  <!-- Thank you state end -->
+</body>
+</html>

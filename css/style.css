@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+:root {
+  --color-primary: hsl(25, 97%, 53%); /*orange*/
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-light: hsl(217, 12%, 63%); /*light grey*/
+  --color-neutral-medium: hsl(216, 12%, 54%); /*medium grey*/
+  --color-neutral-dark: hsl(213, 19%, 18%); /*dark blue*/
+  --color-neutral-very-dark: hsl(216, 12%, 8%); /*very dark blue*/
+  --paragraph-font-size: 15px;
+  --mobile-width: 300px;
+  --desktop-width: 375px;
+  --border-radius: .8rem;
+  --transparent: rgba(125,125,125,.1);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: 'Overpass', sans-serif;
+  background-color: var(--color-neutral-very-dark);
+}
+
+input, button {
+  border-style: none;
+}
+
+.title, .content, .btn-group, .submit {
+  margin: 1rem 0;
+}
+
+.card {
+  padding: 1rem;
+  min-width: var(--mobile-width);
+  max-width: var(--mobile-width);
+  background-color: var(--color-neutral-dark);
+  color: var(--color-neutral-white);
+  border-radius: var(--border-radius);
+}
+
+.card::before {
+  content: "";
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--transparent) url(../images/icon-star.svg) no-repeat center;
+  border-radius: 50%;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-group input[type=button] {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--transparent);
+  color: var(--color-neutral-white);
+  border-radius: 50%;
+}
+
+.submit {
+  width: 100%;
+  height: 2.5rem;
+  background-color: var(--color-primary);
+  color: var(--color-neutral-white);
+  text-transform: uppercase;
+  border-radius: 2.5rem;
+}
+
+.btn-group input[type=button]:hover, .submit:hover {
+  transition: all ease-in .5s;
+  cursor: pointer;
+}
+
+.btn-group input[type=button]:hover {
+  background-color: var(--color-primary);
+}
+
+.btn-group input[type=button]:active {
+  background-color: var(--color-neutral-medium);
+}
+
+.submit:hover {
+  background-color: var(--color-neutral-white);
+  color: var(--color-primary);
+}
+
+.content {
+  font-size: var(--paragraph-font-size);
+  color: var(--color-neutral-light);  
+  line-height: 1.5rem;
+}
+
+.none {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .card {
+    max-width: 360px;
+  }
+}
