@@ -9,15 +9,21 @@ window.addEventListener('visibilitychange', () => {
     )
 })
 
+/**
+ * Envío del formulario
+ * @param {SubmitEvent} e
+ */
 function handleSubmit (e) {
   e.preventDefault()
 }
-
 document.querySelector('#rating-form')
   .addEventListener('submit', handleSubmit)
 
+/**
+ * Guardamos la calificación marcada (interactive rating)
+ * @param {Event} e Click event
+ */
 function handleStars (e) {
-  console.log(e.target.nodeName)
   if (e.target.nodeName === 'INPUT') {
     e.target.classList.add('animate__animated', 'animate__hinge')
     setTimeout(() => {
