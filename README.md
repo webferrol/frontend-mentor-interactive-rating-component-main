@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/webferrol/frontend-mentor-interactive-rating-component-main)
-- Live Site URL: [Add live site URL here](https://magenta-licorice-777d97.netlify.app/)
+- Live Site URL: [Add live site URL here](https://rating-component-xurxo.netlify.app/)
 
 ## My process
 
