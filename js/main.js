@@ -3,18 +3,19 @@ import { changeFavicon } from './favicon-visibility-change.js'
 changeFavicon()
 
 /**
- * Envío del formulario
+ * Evento del formulario
  * @param {SubmitEvent} e
  */
 function handleSubmit (e) {
   e.preventDefault()
-  const article = e.target.closest('article')
-  const article2 = article.nextElementSibling
-  if (!e.target['start-selected'].value) return
-  article.classList.add('none')
-  article2.classList.remove('none')
+  const { target: form } = e
+  const cardRatingElement = form.closest('article')
+  const cardThanksElement = cardRatingElement.nextElementSibling
+  if (!form['start-selected'].value) return
+  cardRatingElement.classList.add('none')
+  cardThanksElement.classList.remove('none')
   // Efectos especiales
-  document.querySelector('.thank-you-state .title')
+  cardThanksElement.querySelector('.title')
     .classList.add('animate__animated', 'animate__flip')
 }
 
@@ -24,21 +25,21 @@ function handleSubmit (e) {
  */
 function handleStars (e) {
   // Limpiamos clase activa de las stars si existen
-  const active = document.querySelector('.active')
-  if (active) active.classList.remove('active')
-
+  const activeElement = document.querySelector('.active')
+  if (activeElement) activeElement.classList.remove('active')
   // Comprobamos el botón pulsado que la etiqueta INPUT
   if (e.target.nodeName === 'INPUT') {
-    document.querySelector('[name="start-selected"]').value = e.target.value
+    const inputButton = e.target
+    document.querySelector('[name="start-selected"]').value = inputButton.value
     // Añadimos clase de seleccionada y efectos especiales
-    e.target.classList.add('active', 'animate__animated', 'animate__hinge')
+    inputButton.classList.add('active', 'animate__animated', 'animate__hinge')
 
     document.querySelector('.featured em')
-      .innerHTML = e.target.value
+      .innerHTML = inputButton.value
 
     // Quitamos efectos especiales
     setTimeout(() => {
-      e.target.classList.remove('animate__animated', 'animate__hinge')
+      inputButton.classList.remove('animate__animated', 'animate__hinge')
     }, 2500)
   }
 }
