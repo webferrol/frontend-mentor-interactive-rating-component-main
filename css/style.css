@@ -7,10 +7,14 @@
   --color-neutral-dark: hsl(213, 19%, 18%); /*dark blue*/
   --color-neutral-very-dark: hsl(216, 12%, 8%); /*very dark blue*/
   --paragraph-font-size: 15px;
-  --mobile-width: 300px;
+  --mobile-width: 340px;
   --desktop-width: 375px;
   --border-radius: .8rem;
   --transparent: rgba(125,125,125,.1);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -25,7 +29,7 @@ input, button {
   border-style: none;
 }
 
-.title, .content, .btn-group, .submit {
+.title, .content, .btn-group, .submit, .thank-you-state::before {
   margin: 1rem 0;
 }
 
@@ -38,7 +42,7 @@ input, button {
   border-radius: var(--border-radius);
 }
 
-.card::before {
+.rating-state::before {
   content: "";
   display: inline-block;
   width: 2.5rem;
@@ -66,6 +70,8 @@ input, button {
   height: 2.5rem;
   background-color: var(--color-primary);
   color: var(--color-neutral-white);
+  font-weight: bold;
+  letter-spacing: .1rem;
   text-transform: uppercase;
   border-radius: 2.5rem;
 }
@@ -83,9 +89,40 @@ input, button {
   background-color: var(--color-neutral-medium);
 }
 
+.btn-group input[type=button].active {
+  background-color: var(--color-neutral-medium);
+}
+
 .submit:hover {
   background-color: var(--color-neutral-white);
   color: var(--color-primary);
+}
+
+.thank-you-state {
+  text-align: center;
+}
+
+.thank-you-state::before {
+  content: 'Rating State';
+  display: inline-block;
+  width: 100%;
+  min-width: 162px;
+  min-height: 108px;
+  background: transparent url('../images/illustration-thank-you.svg') no-repeat center;
+  text-indent: -9999px;
+}
+
+.featured {
+  display: inline-block;
+  padding: .5rem 1rem;
+  background-color: var(--transparent);
+  color: var(--color-primary);
+  font-weight: 400;
+  border-radius: 2.5rem;
+}
+
+.featured em {
+  font-style: normal;
 }
 
 .content {

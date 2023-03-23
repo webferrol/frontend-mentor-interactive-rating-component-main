@@ -11,7 +11,7 @@
   />
   <link rel="stylesheet" href="/css/style.css">
   <title>Frontend Mentor | Interactive rating component</title>
-  <script defer src="/js/main.js"></script>
+  <script defer src="/js/main.js" type="module"></script>
 </head>
 <body>
 
@@ -30,6 +30,7 @@
         <input type="button" value="4" name="star-4">
         <input type="button" value="5" name="star-5">
       </div>
+      <input type="hidden" name="start-selected" value="">
       <button class="btn submit">Submit</button>
     </form>
   </article>
@@ -39,10 +40,12 @@
   <!-- Thank you state start -->
 
   <article class="card thank-you-state none">
-    You selected <!-- Add rating here --> out of 5
-    Thank you!
-    We appreciate you taking the time to give a rating. If you ever need more support,
-    don’t hesitate to get in touch!
+    <strong class="featured">You selected <em>1</em> out of 5</strong>
+    <h1 class="title">Thank you!</h1>
+    <p class="content">
+      We appreciate you taking the time to give a rating. If you ever need more support,
+      don’t hesitate to get in touch!
+    </p>
   </article>
 
   <!-- Thank you state end -->
