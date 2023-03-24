@@ -49,3 +49,6 @@ Users should be able to:
 
 - Website - [WebFerrol](https://www.webferrol.com)
 - Linkedin - [@weberrol](https://es.linkedin.com/in/webferrol?original_referer=https%3A%2F%2Fwww.google.com%2F)
+
+## Accesibilidad
+[Accesibilidad](https://classroom.google.com/c/NjAwOTIwNTc4NjAz?cjc=na6coqb)
